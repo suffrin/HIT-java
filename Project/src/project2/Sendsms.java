@@ -4,9 +4,19 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.net.ssl.HttpsURLConnection;
 
 public class Sendsms {
+	public static Set<String> num() {
+		Set <String> sms = new HashSet<String>();
+		sms.add("814");
+		sms.add("975");
+		sms.add("948");
+		sms.add(" ");
+		return sms;
+	}
 	public static void sendSms(String message,String number)
 	{
 		try
@@ -41,8 +51,13 @@ public class Sendsms {
 			e.printStackTrace();
 		}
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		System.out.println("Started");
-		Sendsms.sendSms("This message sent using java code ..."+new Date(),"8144871867");		
+		Sendsms.num();
+		Set<String> e = num();
+		for(String s : e) {
+			Sendsms.sendSms("This message sent using java code \n"+new Date(),s);
+		}
+		//Sendsms.sendSms("This message sent using java code ..."+new Date(),"8144871867");
 	}
 }
