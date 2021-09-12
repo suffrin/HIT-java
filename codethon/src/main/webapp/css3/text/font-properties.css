@@ -1,0 +1,14 @@
+/*** font-properties.css ***/
+
+         
+body {	 
+	font-family: Constantia, Georgia, "Times New Roman", serif;
+	}
+h1, h2, .author {   
+	font-family: Corbel, Helvetica, Arial, sans-serif;
+}
+h2.chaptertitle {	 
+	font-family: Corbel, Helvetica, Arial, sans-serif;
+} 
+
+
